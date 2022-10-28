@@ -16,43 +16,40 @@
 
 <body>
   <div class="wrapper">
-    <header>
-      <div class="container"></div>
+    <header class="header">
+      <div class="container header__container">
+        <a class="header__logo">
+          <picture>
+            <source media="(max-width: 767px)" srcset="/img/logo-cut.svg" width="35" height="35">
+            <img src="img/logo-full.svg" width="215" height="55" alt="Логотип компании Smart Device.">
+          </picture>
+        </a>
+        <div class="header__contacts">
+          <a class="header__contact" href="mailto:info@sd.ru">
+            <svg width="20" height="20">
+              <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
+            </svg>
+            <span>info@sd.ru</span>
+          </a>
+          <a class="header__contact" href="tel:+74950005252">
+            <svg width="20" height="20">
+              <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+            </svg>
+            <span>+7 (495) 000-52-52</span>
+          </a>
+        </div>
+        <button class="button button--transparent-light header__button" type="button">
+          Заказать звонок
+        </button>
+      </div>
     </header>
-    <main>
+    <main class="main">
     </main>
-    <footer>
-      <div class="container"></div>
+    <footer class="footer">
+      <div class="container footer__container">
+
+      </div>
     </footer>
-  </div>
-
-  <!-- Модалки -->
-  <div class="modal modal--preload" data-modal="feedback">
-    <div class="modal__wrapper">
-      <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Обычная модалка</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-    <div class="modal__wrapper">
-      <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
   </div>
 
   <script src="js/vendor.min.js"></script>

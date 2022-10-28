@@ -1,0 +1,79 @@
+.header {
+    background-image: $black-to-bottom;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 30px;
+    padding-bottom: 35px;
+
+    @include vp-1023 {
+        padding-top: 20px;
+        padding-bottom: 25px;
+    }
+
+    @include vp-767 {
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+}
+
+.header__logo {
+    padding-right: 15px;
+}
+
+.header__logo img {
+    @include vp-767 {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+.header__contacts {
+    display: flex;
+}
+
+.header__contact {
+    min-width: 225px;
+    display: flex;
+    align-items: center;
+    color: $color-alice-blue;
+
+    &:last-child {
+        @include vp-767 {
+            margin-right: 10px;
+        }
+    }
+
+    @include vp-1023 {
+        min-width: fit-content;
+        padding: 20px;
+        margin-right: 20px;
+    }
+
+}
+
+.header__contact svg {
+    margin-right: 15px;
+
+    @include vp-1023 {
+        margin-right: 0;
+    }
+    
+}
+
+.header__contact span {
+    @include vp-1023 {
+        display: none;
+    }
+}
+
+.header__button {
+
+    @include vp-1023 {
+        display: none;
+    }
+}

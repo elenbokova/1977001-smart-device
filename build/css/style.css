@@ -427,7 +427,7 @@ html {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  font-family: "Placeholder", "Arial", sans-serif;
+  font-family: "PT Mono", "Consolas", monospace;
   color: #041827;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -437,7 +437,7 @@ html {
 body {
   width: 100%;
   height: 100%;
-  background-color: #ffffff;
+  background-color: #e5e5e5;
 }
 
 a {
@@ -626,36 +626,9 @@ button,
 
 .container {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1322px;
   margin: 0 auto;
-  padding: 0 40px;
-}
-
-.btn {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  padding: 10px 20px;
-  color: #ffffff;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
-}
-
-.btn--dark {
-  background-color: #041427;
-}
-
-.btn:disabled {
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-.btn.focus-visible:focus {
-  opacity: 0.8;
+  padding: 0 50px;
 }
 
 .modal {
@@ -770,6 +743,104 @@ button,
   pointer-events: auto;
 }
 
+.button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 10px 20px;
+  font-family: "Roboto Condensed", "Verdana", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-transition: opacity 0.3s ease;
+  -o-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.button--dark {
+  background-color: #041427;
+}
+
+.button--bright {
+  background-color: #00b2ff;
+}
+
+.button--transparent-light {
+  border: 1px solid #f2f5f6;
+  color: #f2f5f6;
+}
+
+.button--transparent-bright {
+  border: 1px solid #00b2ff;
+  color: #00b2ff;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.button.focus-visible:focus {
+  opacity: 0.8;
+}
+
+.header {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
+  background-image: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+  background-image: linear-gradient(to bottom, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+}
+
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 35px;
+}
+
+.header__logo {
+  padding-right: 15px;
+}
+
+.header__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__contact {
+  min-width: 225px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #f2f5f6;
+}
+
+.header__contact svg {
+  margin-right: 15px;
+}
+
+.footer {
+  background-color: #041827;
+}
+
+.footer__container {
+  padding-top: 50px;
+  padding-bottom: 55px;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -811,21 +882,40 @@ button,
   }
 */
 
-@media (max-width: 1439px) {
-  .container {
-    padding: 0 32px;
-  }
-}
-
 @media (max-width: 1023px) {
-  .container {
-    padding: 0 24px;
+  .header__container {
+    padding-top: 20px;
+    padding-bottom: 25px;
+  }
+
+  .header__contact {
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    padding: 20px;
+    margin-right: 20px;
+  }
+
+  .header__contact svg {
+    margin-right: 0;
+  }
+
+  .header__contact span {
+    display: none;
+  }
+
+  .header__button {
+    display: none;
+  }
+
+  .footer__container {
+    padding-bottom: 65px;
   }
 }
 
 @media (max-width: 767px) {
   .container {
-    padding: 0 16px;
+    padding: 0 25px;
   }
 
   .modal__wrapper {
@@ -840,10 +930,29 @@ button,
   .modal--fit-content .modal__content {
     width: 100%;
   }
+
+  .header__container {
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+
+  .header__logo img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .header__contact:last-child {
+    margin-right: 10px;
+  }
+
+  .footer__container {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
 }
 
 @media (hover: hover) {
-  .btn:hover:not(.focus-visible) {
+  .button:hover:not(.focus-visible) {
     opacity: 0.8;
   }
 }

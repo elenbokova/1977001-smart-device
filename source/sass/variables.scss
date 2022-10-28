@@ -10,13 +10,15 @@ $color-transparent: rgba(255, 255, 255, 0);
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
 
+$color-whisper: #e5e5e5;
 $color-alice-blue: #f2f5f6;
 $color-deep-sky-blue: #00b2ff;
 $black-pearl: #041427;
 
 // Gradient
 
-$black-to-bottom: linear-gradient(to bottom, rgba(25, 32, 36, 0.7) 72%, rgba(25, 32, 36, 0) 100%);
+$black-to-bottom: linear-gradient(to bottom, $color-default-black 84.9%, rgba(4, 24, 39, 0) 100%);
+$gray-to-bottom: linear-gradient(to bottom, rgba(25, 32, 36, 0.7) 72%, rgba(25, 32, 36, 0) 100%);
 
 // Typography
 // ---------------------------------
@@ -31,7 +33,7 @@ $ff-rouble: "Rouble", "Arial", sans-serif;
 $ff-placeholder: "Placeholder", "Arial", sans-serif;
 
 $ff-basic: "PT Mono", "Consolas", monospace;
-$ff-custom: "Roboto Condensed", "Verdana", sans-serif;
+$ff-fancy: "Roboto Condensed", "Verdana", sans-serif;
 
 // Animation
 // ---------------------------------

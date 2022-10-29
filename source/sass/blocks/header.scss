@@ -5,7 +5,7 @@
 .header__container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 
     padding-top: 30px;
     padding-bottom: 35px;
@@ -22,7 +22,9 @@
 }
 
 .header__logo {
+    align-self: flex-start;
     padding-right: 15px;
+    flex-shrink: 0;
 }
 
 .header__logo img {
@@ -33,11 +35,14 @@
 }
 
 .header__contacts {
-    display: flex;
+    align-self: normal;
+    display: grid;
+    grid-template-columns: (1fr 1fr);
+    column-gap: 30px;
+    row-gap: 20px;
 }
 
 .header__contact {
-    min-width: 225px;
     display: flex;
     align-items: center;
     color: $color-alice-blue;
@@ -53,7 +58,6 @@
         padding: 20px;
         margin-right: 20px;
     }
-
 }
 
 .header__contact svg {
@@ -61,8 +65,7 @@
 
     @include vp-1023 {
         margin-right: 0;
-    }
-    
+    }    
 }
 
 .header__contact span {
@@ -72,6 +75,7 @@
 }
 
 .header__button {
+    max-width: 220px;
 
     @include vp-1023 {
         display: none;

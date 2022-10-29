@@ -747,6 +747,8 @@ button,
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   padding: 10px 20px;
   font-family: "Roboto Condensed", "Verdana", sans-serif;
   color: #ffffff;
@@ -800,25 +802,35 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   padding-top: 30px;
   padding-bottom: 35px;
 }
 
 .header__logo {
+  -ms-flex-item-align: start;
+  align-self: flex-start;
   padding-right: 15px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .header__contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -ms-grid-row-align: normal;
+  align-self: normal;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 30px;
+  -moz-column-gap: 30px;
+  column-gap: 30px;
+  row-gap: 20px;
 }
 
 .header__contact {
-  min-width: 225px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -830,6 +842,20 @@ button,
 
 .header__contact svg {
   margin-right: 15px;
+}
+
+.header__button {
+  max-width: 220px;
+}
+
+.main__heading {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0)));
+  background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 72%, rgba(25, 32, 36, 0) 100%);
+  background-image: linear-gradient(to bottom, rgba(25, 32, 36, 0.7) 72%, rgba(25, 32, 36, 0) 100%);
+}
+
+.main__heading h1 {
+  font-family: "Roboto Condensed", "Verdana", sans-serif;
 }
 
 .footer {

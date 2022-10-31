@@ -6,6 +6,7 @@
 $color-default-black: #041827;
 $color-default-white: #ffffff;
 $color-transparent: rgba(255, 255, 255, 0);
+$color-default-white-transparent: rgba(255, 255, 255, 0.7);
 
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
@@ -61,4 +62,4 @@ $vp-1920: 1920px;
 // ---------------------------------
 
 $retina-dpi: 144dpi;
-$retina-dppx: 1.5dppx;
+$retina-dppx: 2dppx;

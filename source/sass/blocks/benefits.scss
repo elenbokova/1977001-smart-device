@@ -1,0 +1,91 @@
+.benefits {
+    padding: 120px 0;
+
+    @include vp-1023 {
+        padding: 80px 0;
+    }
+
+    @include vp-767 {
+        padding: 50px 0;
+    }
+}
+
+.benefits ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 31px;
+    row-gap: 30px;
+
+    @include vp-767 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.benefits li {
+    position: relative;
+    min-height: 300px;
+    padding: 40px 45px 35px;
+    border: 1px solid $color-whisper;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: -1px;
+        top: 0;
+        width: 5px;
+        height: 100%;
+        background-color: $color-deep-sky-blue;
+    }
+
+    @include vp-1023 {
+        min-height: 360px;
+        padding-left: 40px;
+        padding-right: 35px;
+    }
+
+    @include vp-767 {
+        min-height: 340px;
+        padding-left: 25px;
+        padding-right: 30px;
+    }
+
+    @include hover-focus {
+        color: $color-alice-blue;
+        background-color: $color-deep-sky-blue;
+
+        svg,
+        h3 {
+            color: $color-alice-blue;
+        }
+    }
+}
+
+.benefits svg {
+    margin-bottom: 20px;
+    color: $color-deep-sky-blue;
+}
+
+.benefits h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-family: $ff-fancy;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: $color-deep-sky-blue;
+
+    @include vp-767 {
+        font-size: 20px;
+    }
+}
+
+.benefits p {
+    margin: 0;
+
+    @include vp-767 {
+        font-size: 14px;
+    }
+}

@@ -48,7 +48,7 @@
     column-gap: 30px;
     row-gap: 20px;
 
-    @include vp-767 {
+    @include vp-1023 {
         column-gap: 20px;
     }
 }
@@ -67,7 +67,6 @@
     @include vp-1023 {
         min-width: fit-content;
         padding: 20px;
-        margin-right: 20px;
     }
 
     @include vp-767 {
@@ -79,7 +78,7 @@
 .header__contact svg {
     margin-right: 15px;
 
-    @include vp-767 {
+    @include vp-1023 {
         margin-right: 0;
     }
 }

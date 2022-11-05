@@ -1,8 +1,9 @@
 .header {
-    position: fixed;
+    position: sticky;
     width: 100%;
+    margin-bottom: -17px;
     z-index: 5;
-    background-image: $black-to-bottom;
+    background-image: $black-to-bottom;    
 }
 
 .header__container {

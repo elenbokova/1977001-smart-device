@@ -1,5 +1,3 @@
-import { changeButtonState } from '../utils/change-button-state';
-
 const hidingAreas = document.querySelectorAll('[data-id="to-hide"]');
 const hideButtons = document.querySelectorAll('[data-id="hide-button"]');
 
@@ -17,13 +15,15 @@ const showAreas = () => {
 
 const changeContent = (element) => {
 
-    if (element.textContent === "Подробнее") {
+    if (element.getAttribute("data-state") === "is-closed") {
+        showAreas();
+        element.setAttribute("data-state", "is-opened");
         element.textContent = "Свернуть";
-        showAreas();        
     }
-    else {
-        element.textContent = "Подробнее";
+    else if (element.getAttribute("data-state") === "is-opened") {
         hideAreas();
+        element.setAttribute("data-state", "is-closed");
+        element.textContent = "Подробнее";
     }
 }
 
@@ -34,12 +34,10 @@ const initHideButton = () => {
 
     hideButtons.forEach((element) => {
         element.addEventListener('click', () => {
-            changeButtonState(element);
             changeContent(element);
         });
     });
 }
-
 
 export { initHideButton };
 

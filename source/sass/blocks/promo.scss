@@ -57,8 +57,9 @@
     }
 }
 
-.promo button {
+.promo a {
     line-height: 21px;
+    scroll-behavior: smooth;
 
     &:not(last-child) {
         margin-right: 20px;
@@ -66,7 +67,7 @@
     }
 }
 
-.promo button .short {
+.promo a .short {
     display: none;
 
     @include vp-767 {
@@ -74,7 +75,7 @@
     }
 }
 
-.promo button .long {
+.promo a .long {
 
     @include vp-767 {
         display: none;

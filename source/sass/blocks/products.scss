@@ -62,6 +62,7 @@
 
 .products li {
     position: relative;
+    background-color: $color-default-white-transparent;
     background-image: $gray-transparent-cover, url("../img/bg-products.jpg");
     background-size: cover;
 

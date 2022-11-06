@@ -148,7 +148,6 @@
   border-radius: 3px;
   line-height: 22px;
   background-color: $color-light-gray-transparent;
-  color: $color-default-white;
 
   &--text {
     padding-top: 25px;
@@ -185,6 +184,16 @@
     border-radius: 2px;
   }
 }
+
+.modal__checkbox-input {
+  @include focus {
+    +.modal__checkbox-label {
+      outline: 1px solid $color-default-white-transparent;
+      outline-offset: 2px;
+    }
+  }
+}
+
 
 .modal__checkbox-input[type="checkbox"]:checked+.modal__checkbox-label {
 

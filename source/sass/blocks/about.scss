@@ -12,7 +12,7 @@
 }
 
 .about span {
-    background: url("/img/about-bg.jpg");
+    background: url("/img/background/bg-about.jpg");
     font-family: $ff-fancy;
     font-size: 156px;
     font-weight: 700;
@@ -21,6 +21,11 @@
     writing-mode: vertical-rl;
     background-clip: text;
     color: transparent;
+
+    @media (min-resolution: $retina-dppx) {
+        background: url("/img/background/bg-about@2x.jpg");
+        background-clip: text;
+    }
 
     @include vp-767 {
         display: none;

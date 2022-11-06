@@ -11,6 +11,17 @@
     }
 }
 
+.products img {
+    position: absolute;
+    width: 1494px;
+    height: 818px;
+    max-width: none;
+    bottom: -46px;
+    left: -534px;
+    object-fit: cover;
+    z-index: -1;
+}
+
 .products h2 {
     margin: 0;
     margin-bottom: 50px;
@@ -62,12 +73,17 @@
 
 .products li {
     position: relative;
-    background-color: $color-default-white-transparent;
-    background-image: $gray-transparent-cover, url("../img/bg-products.jpg");
-    background-size: cover;
+    min-height: 650px;
+    z-index: 1;
 
-    @media (min-resolution: $retina-dppx) {
-        background-image: $gray-transparent-cover, url("../img/bg-products@2x.jpg");
+    background-color: $color-default-white-transparent;
+
+    @include hover-focus {
+        opacity: 0.9;
+
+        & h3 {
+            color: $color-sky-blue;
+        }
     }
 
     &::after {
@@ -92,9 +108,11 @@
 }
 
 .products a {
+    position: relative;
     display: block;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .products h3 {

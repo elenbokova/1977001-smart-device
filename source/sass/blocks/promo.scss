@@ -2,13 +2,13 @@
     padding-top: 305px;
     padding-bottom: 280px;
     background-color: $color-default-black;
-    background-image: $gray-to-bottom, url("../img/bg-promo.jpg");
+    background-image: $gray-to-bottom, url("../img/background/bg-promo.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     color: $color-alice-blue;
 
     @media (min-resolution: $retina-dppx) {
-        background-image: $gray-to-bottom, url("../img/bg-promo@2x.jpg");
+        background-image: $gray-to-bottom, url("../img/background/bg-promo@2x.jpg");
     }
 
     @include vp-1023 {

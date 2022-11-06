@@ -39,6 +39,11 @@ body {
 a {
   color: $color-default-black;
   text-decoration: none;
+  outline: none;
+
+  @include focus {
+    outline: 1px solid $color-default-white-transparent;
+  }
 }
 
 img,
@@ -68,9 +73,16 @@ input:-webkit-autofill {
 input,
 textarea {
   border-radius: 0;
+  outline: none;
+  color: $black-pearl;
+
+  @include focus {
+    outline: 1px solid $color-default-white-transparent;
+  }
 
   &::placeholder {
     opacity: 1;
+    color: $color-default-white;
   }
 
   &:invalid {
@@ -84,6 +96,7 @@ select {
 
 // ie11 X removal
 input {
+
   &::-ms-clear,
   &::-ms-reveal {
     display: none;

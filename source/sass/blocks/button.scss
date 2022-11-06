@@ -3,7 +3,7 @@
   justify-content: center;
   word-wrap: break-word;
   padding: 10px 20px;
-  
+
   font-family: $ff-fancy;
   font-weight: 700;
   color: $color-default-white;
@@ -18,29 +18,47 @@
 
   &--dark {
     background-color: $black-pearl;
+
+    @include hover-focus {
+      background-color: $color-alice-blue;
+      border-color: $black-pearl;
+      color: $black-pearl;
+    }
   }
 
   &--bright {
     background-color: $color-deep-sky-blue;
+
+    @include hover-focus {
+      color: $color-deep-sky-blue;
+      background-color: $color-whisper;
+    }
   }
 
   &--transparent-light {
     border: 1px solid $color-alice-blue;
     color: $color-alice-blue;
+
+    @include hover-focus {
+      border-color: $color-deep-sky-blue;
+      color: $color-deep-sky-blue;
+    }
   }
 
   &--transparent-bright {
     border: 1px solid $color-deep-sky-blue;
     color: $color-deep-sky-blue;
+
+    @include hover-focus {
+      color: $color-default-white;
+      background-color: $color-default-gray-transparent;
+      border-color: $color-default-gray-transparent;
+    }
   }
 
   &:disabled {
     opacity: 0.5;
 
     pointer-events: none;
-  }
-
-  @include hover-focus {
-    opacity: 0.8;
   }
 }

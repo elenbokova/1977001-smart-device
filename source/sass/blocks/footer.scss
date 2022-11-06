@@ -197,3 +197,9 @@ button [data-id="nav-toggle"],
     color: $color-default-white-transparent;
     line-height: 25px;
 }
+
+.footer a {
+    @include hover-focus {
+        color: $color-sky-blue;
+    }
+}

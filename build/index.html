@@ -153,6 +153,11 @@
           <ul>
             <li>
               <a href="#">
+                <picture>
+                  <source srcset="img/img-product.webp 1x, img/img-product@2x.webp 2x" type="image/webp">
+                  <img src="img/img-product.jpg" srcset="img/img-product@2x.jpg 2x" alt="Фото продукта компании"
+                    width="1494" height="818">
+                </picture>
                 <h3>
                   Производство печатных&nbsp;плат
                 </h3>
@@ -160,6 +165,11 @@
             </li>
             <li>
               <a href="#">
+                <picture>
+                  <source srcset="img/img-product.webp 1x, img/img-product@2x.webp 2x" type="image/webp">
+                  <img src="img/img-product.jpg" srcset="img/img-product@2x.jpg 2x" alt="Фото продукта компании"
+                    width="1494" height="818">
+                </picture>
                 <h3>
                   Монтаж печатных плат
                 </h3>
@@ -167,6 +177,11 @@
             </li>
             <li>
               <a href="#">
+                <picture>
+                  <source srcset="img/img-product.webp 1x, img/img-product@2x.webp 2x" type="image/webp">
+                  <img src="img/img-product.jpg" srcset="img/img-product@2x.jpg 2x" alt="Фото продукта компании"
+                    width="1494" height="818">
+                </picture>
                 <h3>
                   Комплектующие для светотехники
                 </h3>
@@ -201,7 +216,8 @@
 
               <fieldset>
                 <button class="button button--dark" type="submit">Задать вопрос</button>
-                <input class="visually-hidden" type="checkbox" id="modal-permission" name="modal-permission" checked>
+                <input class="visually-hidden" type="checkbox" id="modal-permission" name="modal-permission" checked
+                  required>
                 <label for="modal-permission">Я согласен на&nbsp;обработку персональных данных</label>
               </fieldset>
             </form>
@@ -333,7 +349,8 @@
         <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
           <label>
             <span class="visually-hidden">Имя</span>
-            <input class="modal__input" type="text" id="name" name="name" placeholder="Имя" data-focus required autofocus>
+            <input class="modal__input" type="text" id="name" name="name" placeholder="Имя" data-focus required
+              autofocus>
           </label>
           <label>
             <span class="visually-hidden">Телефон</span>
@@ -341,10 +358,12 @@
           </label>
           <label>
             <span class="visually-hidden">Ваш вопрос</span>
-            <textarea class="modal__input modal__input--text" id="question" name="question" rows="5" placeholder="Ваш вопрос"></textarea>
+            <textarea class="modal__input modal__input--text" id="question" name="question" rows="5"
+              placeholder="Ваш вопрос"></textarea>
           </label>
           <button class="button button--dark modal__button" type="submit">Задать вопрос</button>
-          <input class="visually-hidden modal__checkbox-input" type="checkbox" id="permission" name="permission" checked>
+          <input class="visually-hidden modal__checkbox-input" type="checkbox" id="permission" name="permission" checked
+            required>
           <label class="modal__checkbox-label" for="permission">Я согласен на&nbsp;обработку персональных данных</label>
         </form>
       </div>

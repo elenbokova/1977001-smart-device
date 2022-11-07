@@ -1,22 +1,23 @@
 .about {
-    padding-bottom: 100px;
+    padding-bottom: 104px;
 
     @include vp-1023 {
         padding-bottom: 80px;
     }
 }
 
-.about > div {
+.about>div {
     display: flex;
     align-items: flex-start;
 }
 
-.about span {
+.about strong {
+    margin-right: 73px;
     background: url("/img/background/bg-about.jpg");
     font-family: $ff-fancy;
     font-size: 156px;
     font-weight: 700;
-    line-height: 220px;
+    line-height: 176px;
     transform: rotate(180deg);
     writing-mode: vertical-rl;
     background-clip: text;
@@ -27,6 +28,10 @@
         background-clip: text;
     }
 
+    @include vp-1023 {
+        margin-right: 0;
+    }
+
     @include vp-767 {
         display: none;
     }
@@ -34,31 +39,69 @@
 
 .about h2 {
     margin-top: 0;
-    margin-bottom: 15px;
+    margin-bottom: 11px;
     font-family: $ff-fancy;
     font-size: 36px;
     line-height: 51px;
     font-weight: 400;
 
+    @include vp-1023 {
+        margin-top: -7px;
+    }
+
     @include vp-767 {
+        margin-bottom: 13px;
         font-size: 28px;
+        line-height: 39px;
     }
 }
 
 .about p {
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 17px;
+    line-height: 23px;
+
+    @include vp-1023 {
+        line-height: 22px;
+    }
 
     @include vp-767 {
+        margin-bottom: 17px;
         font-size: 14px;
+        line-height: 19px;
     }
 }
 
 .about button {
+    margin-top: 21px;
+    padding-top: 13px;
+    padding-bottom: 13px;
     min-width: 180px;
+
+    @include vp-1023 {
+        margin-top: 2px;
+    }
+
+    @include vp-767 {
+        min-width: 160px;
+        margin-top: -2px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 }
 
-p [data-id="to-hide"],
+.about [data-id="to-hide"],
+[data-state="is-hidden"] {
+    display: none;
+}
+
+.about [data-id="to-hide-mobile"] {
+    @include vp-767 {
+        display: none;
+    }
+}
+
+.about [data-id="to-hide-mobile"]
 [data-state="is-hidden"] {
     display: none;
 }

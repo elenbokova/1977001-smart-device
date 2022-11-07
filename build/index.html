@@ -105,9 +105,9 @@
 
       <section class="about">
         <div class="container">
-          <span class="mask">
+          <strong>
             2022
-          </span>
+          </strong>
           <div>
             <h2>О компании</h2>
             <p>Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые
@@ -117,12 +117,14 @@
             <p>
               Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC,
               REFOND.
-              Печатные
-              платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог
-              (РЖД),
-              РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители
-              светотехники России.
+              <span data-id="to-hide-mobile" data-state="">
+                Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог
+                (РЖД),
+                РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители
+                светотехники России.
+              </span>
             </p>
+
             <p data-id="to-hide" data-state="">Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло
               более 1&nbsp;000
               000&nbsp;клиентов, 70% из&nbsp;которых
@@ -147,7 +149,7 @@
         <div class="container">
           <h2>
             <span>Smart Device предлагает следующие товары и&nbsp;услуги</span>
-            <span>Товары и&nbsp;услуги Smart Device</span>
+            <span>Товары и&nbsp;услуги Smart&nbsp;Device</span>
           </h2>
 
           <ul>
@@ -183,7 +185,7 @@
                     width="1494" height="818">
                 </picture>
                 <h3>
-                  Комплектующие для светотехники
+                  Комплектующие для&nbsp;светотехники
                 </h3>
               </a>
             </li>
@@ -201,24 +203,24 @@
               <fieldset>
                 <label>
                   <span class="visually-hidden">Имя</span>
-                  <input type="text" id="modal-name" name="modal-name" placeholder="Имя" required>
+                  <input type="text" id="name" name="name" placeholder="Имя" required>
                 </label>
                 <label>
                   <span class="visually-hidden">Телефон</span>
-                  <input type="tel" id="modal-phone" name="modal-phone" placeholder="Телефон" required>
+                  <input type="tel" data-phone-input id="phone" name="phone" placeholder="Телефон" minlength="15" maxlength="18" required>
                 </label>
               </fieldset>
 
               <label>
                 <span class="visually-hidden">Ваш вопрос</span>
-                <textarea id="modal-question" name="modal-question" rows="5" placeholder="Ваш вопрос"></textarea>
+                <textarea id="question" name="question" placeholder="Ваш вопрос"></textarea>
               </label>
 
               <fieldset>
                 <button class="button button--dark" type="submit">Задать вопрос</button>
-                <input class="visually-hidden" type="checkbox" id="modal-permission" name="modal-permission" checked
+                <input class="visually-hidden" type="checkbox" id="permission" name="permission" checked
                   required>
-                <label for="modal-permission">Я согласен на&nbsp;обработку персональных данных</label>
+                <label for="permission">Я согласен на&nbsp;обработку персональных данных</label>
               </fieldset>
             </form>
           </div>
@@ -235,7 +237,7 @@
           </a>
 
           <div class="footer__social social">
-            <ul class="social__list">
+            <ul class="footer__social-list social__list">
               <li class="social__item">
                 <a class="social__link social__link--ok" href="https://ok.ru/htmlacademy">
                   <svg width="30" height="30">
@@ -308,7 +310,7 @@
             <ul class="footer__list">
               <li class="footer__list-item">
                 <address class="footer__address">
-                  г. Мытищи, Олимпийский проспект,<br> д.10
+                  г. Мытищи, Олимпийский проспект, д.10
                 </address>
               </li>
               <li class="footer__list-item">
@@ -349,22 +351,22 @@
         <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post" autocomplete="off">
           <label>
             <span class="visually-hidden">Имя</span>
-            <input class="modal__input" type="text" id="name" name="name" placeholder="Имя" data-focus required
+            <input class="modal__input" type="text" id="modal-name" name="modal-name" placeholder="Имя" data-focus required
               autofocus>
           </label>
           <label>
             <span class="visually-hidden">Телефон</span>
-            <input class="modal__input" type="tel" id="phone" name="phone" placeholder="Телефон" required>
+            <input class="modal__input" type="tel" data-phone-input id="modal-phone" name="modal-phone" placeholder="Телефон" minlength="15" maxlength="18" required>
           </label>
           <label>
             <span class="visually-hidden">Ваш вопрос</span>
-            <textarea class="modal__input modal__input--text" id="question" name="question" rows="5"
+            <textarea class="modal__input modal__input--text" id="modal-question" name="modal-question"
               placeholder="Ваш вопрос"></textarea>
           </label>
-          <button class="button button--dark modal__button" type="submit">Задать вопрос</button>
-          <input class="visually-hidden modal__checkbox-input" type="checkbox" id="permission" name="permission" checked
+          <button class="button button--dark modal__button" type="submit">Отправить</button>
+          <input class="visually-hidden modal__checkbox-input" type="checkbox" id="modal-permission" name="permission" checked
             required>
-          <label class="modal__checkbox-label" for="permission">Я согласен на&nbsp;обработку персональных данных</label>
+          <label class="modal__checkbox-label" for="modal-permission">Я согласен на&nbsp;обработку персональных данных</label>
         </form>
       </div>
     </div>

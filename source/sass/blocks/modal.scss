@@ -124,44 +124,50 @@
 
 .modal__title {
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   font-family: $ff-fancy;
   font-size: 30px;
   font-weight: 400;
-  line-height: 42px;
+  line-height: 30px;
   color: $color-default-white;
 }
 
 .modal__text {
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   font-size: 16px;
   line-height: 22px;
   color: $color-default-white;
 }
 
+.modal__form {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+}
+
 .modal__input {
   width: 100%;
   padding: 15px;
-  margin-bottom: 20px;
   border: none;
   border-radius: 3px;
   line-height: 22px;
   background-color: $color-light-gray-transparent;
 
   &--text {
+    height: 155px;
     padding-top: 25px;
-  }
-
-  &:last-child {
-    margin-bottom: 25px;
   }
 }
 
-.modal__button {
+form .modal__button {
   display: block;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 16px;
+  text-transform: uppercase;
 }
 
 .modal__checkbox-label {
@@ -193,7 +199,6 @@
     }
   }
 }
-
 
 .modal__checkbox-input[type="checkbox"]:checked+.modal__checkbox-label {
 

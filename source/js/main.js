@@ -2,6 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {initAccordionMenu} from './modules/accordion-menu.js';
 import {initHideButton} from './modules/hide-button.js';
+import {initPhoneCheck} from './utils/phone-check.js';
 
 // ---------------------------------
 
@@ -21,6 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
     initHideButton();
     initAccordionMenu();
+    initPhoneCheck();
   });
 });
 

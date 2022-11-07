@@ -23,6 +23,13 @@ footer [data-id="footer"],
     background-color: $color-transparent;
     border: 0;
     cursor: pointer;
+
+    &:hover {
+        &::before {
+            opacity: 0.5;
+            transition: opacity 0.2s;
+        }
+    }
 }
 
 button [data-id="nav-toggle"],
@@ -67,6 +74,7 @@ button [data-id="nav-toggle"],
         display: grid;
         grid-template-columns: auto 320px;
         padding-bottom: 65px;
+        column-gap: 101px;
     }
 
     @include vp-767 {
@@ -93,16 +101,18 @@ button [data-id="nav-toggle"],
 
     &:not(:first-child) {
         @include vp-767 {
-        padding: 20px 0;
+            padding: 20px 0 24px;
         }
     }
 }
 
 .footer__heading {
+    width: 28%;
+    min-width: 220px;
     margin-right: auto;
-    flex-shrink: 0;
 
     @include vp-1023 {
+        width: 100%;
         grid-column: 1/-1;
         display: flex;
         justify-content: space-between;
@@ -120,18 +130,40 @@ button [data-id="nav-toggle"],
 
 .footer__logo {
     display: inline-block;
-    margin-bottom: 30px;
+    margin-bottom: 22px;
     overflow: hidden;
 
     @include vp-1023 {
         display: block;
         margin-bottom: 0;
-        margin-right: auto;
     }
 
     @include vp-767 {
         margin-bottom: 15px;
         margin-right: 0;
+    }
+}
+
+.footer__social {
+    @include vp-1023 {
+        margin-top: 4px;
+        margin-right: -5px;
+    }
+
+    @include vp-767 {
+        margin-top: 0;
+    }
+}
+
+.footer__social-list {
+    display: flex;
+    margin: 0;
+    margin-left: 10px;
+    padding: 0;
+    list-style-type: none;
+
+    @include vp-1023 {
+        margin-left: 0;
     }
 }
 
@@ -142,11 +174,20 @@ button [data-id="nav-toggle"],
     color: $color-default-white;
     font-size: 15px;
     line-height: 16px;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.05em;
 
     @include vp-767 {
         margin-bottom: 0;
+    }
+}
+
+.footer__nav {
+    margin-top: 8px;
+
+    @include vp-1023 {
+        margin-top: 0;
     }
 }
 
@@ -176,26 +217,44 @@ button [data-id="nav-toggle"],
     }
 }
 
-
-
 .footer__list-item {
-    padding-bottom: 10px;
+    margin-bottom: 8px;
+    line-height: 22px;
     word-wrap: break-word;
 }
 
 .footer__nav-link {
     color: $color-default-white-transparent;
-    line-height: 22px;
+}
+
+.footer__contacts {
+    margin-left: auto;
+    margin-top: 8px;
+    width: 28.5%;
+
+    @include vp-1023 {
+        width: auto;
+        margin-left: 0;
+        margin-top: 0;
+    }
 }
 
 .footer__address {
     margin-bottom: 10px;
     font-style: normal;
+
+    @include vp-767 {
+        font-size: 14px;
+    }
 }
 
 .footer__contacts-link {
     color: $color-default-white-transparent;
-    line-height: 25px;
+    line-height: 22px;
+
+    @include vp-767 {
+        font-size: 14px;
+    }
 }
 
 .footer a {

@@ -2,9 +2,12 @@
   display: inline-flex;
   justify-content: center;
   word-wrap: break-word;
-  padding: 10px 20px;
+  padding: 10px 17px;
 
   font-family: $ff-fancy;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
   font-weight: 700;
   color: $color-default-white;
   text-transform: uppercase;

@@ -1,13 +1,13 @@
 .products {
-    padding: 70px 0 140px;
+    padding: 66px 0 140px;
     background-color: $color-default-black;
 
     @include vp-1023 {
-        padding: 60px 0 75px;
+        padding: 55px 0 75px;
     }
 
     @include vp-767 {
-        padding: 50px 0 86px;
+        padding: 42px 0 86px;
     }
 }
 
@@ -16,23 +16,42 @@
     width: 1494px;
     height: 818px;
     max-width: none;
-    bottom: -46px;
+    bottom: -51px;
     left: -534px;
     object-fit: cover;
     z-index: -1;
+    
+    
+    @include vp-1023 {
+        left: auto;
+        bottom: -253px;
+        right: -195px;
+      }
+  
+      @include vp-767 {
+        bottom: -30px;
+        right: auto;
+        left: -365px;
+      }
 }
 
 .products h2 {
     margin: 0;
-    margin-bottom: 50px;
+    margin-bottom: 51px;
     font-family: $ff-fancy;
     font-size: 36px;
     line-height: 51px;
     font-weight: 400;
     color: $color-default-white;
 
+    @include vp-1023 {
+        margin-bottom: 38px;
+    }
+
     @include vp-767 {
+        margin-bottom: 28px;
         font-size: 28px;
+        line-height: 41px;
     }
 }
 
@@ -75,8 +94,12 @@
     position: relative;
     min-height: 650px;
     z-index: 1;
-
     background-color: $color-default-white-transparent;
+
+    @include vp-1023 {
+        min-height: 250px;
+    }
+
 
     @include hover-focus {
         opacity: 0.9;
@@ -101,10 +124,43 @@
         cursor: pointer;
 
         @include vp-767 {
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
         }
     }
+}
+
+.products li:nth-child(3n+1) img {
+    left: -187px;
+
+    @include vp-1023 {
+        bottom: -18px;
+        left: -244px;
+    }
+
+    @include vp-767 {
+        bottom: -268px;
+        left: -375px;
+    }
+}
+
+.products li:nth-child(3n+3) img {
+    left: auto;
+    right: -249px;
+    bottom: -61px;
+
+    @include vp-1023 {
+        right: auto;
+        left: -148px;
+        bottom: -208px;
+    }
+
+    @include vp-767 {
+        left: auto;
+        right: -339px;
+        bottom: -173px;
+    }
+
 }
 
 .products a {
@@ -113,11 +169,13 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    background-image: $gray-transparent-cover;
 }
 
 .products h3 {
     display: block;
-    margin: 0 80px 0 40px;
+    max-width: 180px;
+    margin: 0 40px;
     padding-top: 50px;
     font-family: $ff-fancy;
     font-size: 20px;
@@ -126,13 +184,15 @@
     color: $color-default-white;
 
     @include vp-1023 {
+        max-width: 150px;
         margin-left: 45px;
         padding-top: 40px;
     }
 
     @include vp-767 {
+        max-width: 135px;
         font-size: 18px;
         margin: 0 30px;
-        padding-top: 30px;
+        padding-top: 27px;
     }
 }

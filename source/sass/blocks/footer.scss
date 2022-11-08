@@ -1,264 +1,263 @@
 .footer {
-    background-color: $color-default-black;
-    color: $color-default-white-transparent;
+  background-color: $color-default-black;
+  color: $color-default-white-transparent;
 }
 
 footer [data-id="footer"],
 [data-js-status="is-active"] {
-
-    @include vp-767 {
-        .footer__nav-toggle {
-            display: block;
-        }
+  @include vp-767 {
+    .footer__nav-toggle {
+      display: block;
     }
+  }
 }
 
 .footer__nav-toggle {
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 18px;
-    width: 15px;
-    height: 15px;
-    background-color: $color-transparent;
-    border: 0;
-    cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 18px;
+  width: 15px;
+  height: 15px;
+  background-color: $color-transparent;
+  border: 0;
+  cursor: pointer;
 
-    &:hover {
-        &::before {
-            opacity: 0.5;
-            transition: opacity 0.2s;
-        }
+  &:hover {
+    &::before {
+      opacity: 0.5;
+      transition: opacity 0.2s;
     }
+  }
 }
 
 button [data-id="nav-toggle"],
 [data-state="is-closed"] {
-    &:before {
-        content: "";
-        position: absolute;
-        top: 0px;
-        left: 0;
-        width: 15px;
-        height: 15px;
-        background: url("/img/svg/icon-plus.svg");
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background: url("/img/svg/icon-plus.svg");
+  }
 }
 
 button [data-id="nav-toggle"],
-[data-state="is-closed"]~div {
-    @include vp-767 {
-        display: none;
-    }
+[data-state="is-closed"] ~ div {
+  @include vp-767 {
+    display: none;
+  }
 }
 
 button [data-id="nav-toggle"],
 [data-state="is-opened"] {
-    &:before {
-        content: "";
-        position: absolute;
-        top: 0px;
-        left: 0;
-        width: 15px;
-        height: 15px;
-        background: url("/img/svg/icon-minus.svg");
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background: url("/img/svg/icon-minus.svg");
+  }
 }
 
 .footer__container {
-    display: flex;
-    padding-top: 50px;
-    padding-bottom: 55px;
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 55px;
 
-    @include vp-1023 {
-        display: grid;
-        grid-template-columns: auto 320px;
-        padding-bottom: 65px;
-        column-gap: 101px;
-    }
+  @include vp-1023 {
+    display: grid;
+    grid-template-columns: auto 320px;
+    padding-bottom: 65px;
+    column-gap: 101px;
+  }
 
-    @include vp-767 {
-        display: block;
-        padding-top: 35px;
-        padding-bottom: 35px;
-    }
+  @include vp-767 {
+    display: block;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
 }
 
-.footer__container>div {
-    position: relative;
+.footer__container > div {
+  position: relative;
 
-    &::after {
-        @include vp-767 {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: -30px;
-            width: calc(100% + 54px);
-            height: 1px;
-            background-color: $color-default-white-transparent;
-        }
+  &::after {
+    @include vp-767 {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -30px;
+      width: calc(100% + 54px);
+      height: 1px;
+      background-color: $color-default-white-transparent;
     }
+  }
 
-    &:not(:first-child) {
-        @include vp-767 {
-            padding: 20px 0 24px;
-        }
+  &:not(:first-child) {
+    @include vp-767 {
+      padding: 20px 0 24px;
     }
+  }
 }
 
 .footer__heading {
-    width: 28%;
-    min-width: 220px;
-    margin-right: auto;
+  width: 28%;
+  min-width: 220px;
+  margin-right: auto;
 
-    @include vp-1023 {
-        width: 100%;
-        grid-column: 1/-1;
-        display: flex;
-        justify-content: space-between;
-        margin-right: 0;
-        margin-bottom: 35px;
-    }
+  @include vp-1023 {
+    width: 100%;
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 0;
+    margin-bottom: 35px;
+  }
 
-    @include vp-767 {
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 0;
-        padding-bottom: 25px;
-    }
+  @include vp-767 {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+    padding-bottom: 25px;
+  }
 }
 
 .footer__logo {
-    display: inline-block;
-    margin-bottom: 22px;
-    overflow: hidden;
+  display: inline-block;
+  margin-bottom: 22px;
+  overflow: hidden;
 
-    @include vp-1023 {
-        display: block;
-        margin-bottom: 0;
-    }
+  @include vp-1023 {
+    display: block;
+    margin-bottom: 0;
+  }
 
-    @include vp-767 {
-        margin-bottom: 15px;
-        margin-right: 0;
-    }
+  @include vp-767 {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
 }
 
 .footer__social {
-    @include vp-1023 {
-        margin-top: 4px;
-        margin-right: -5px;
-    }
+  @include vp-1023 {
+    margin-top: 4px;
+    margin-right: -5px;
+  }
 
-    @include vp-767 {
-        margin-top: 0;
-    }
+  @include vp-767 {
+    margin-top: 0;
+  }
 }
 
 .footer__social-list {
-    display: flex;
-    margin: 0;
-    margin-left: 10px;
-    padding: 0;
-    list-style-type: none;
+  display: flex;
+  margin: 0;
+  margin-left: 10px;
+  padding: 0;
+  list-style-type: none;
 
-    @include vp-1023 {
-        margin-left: 0;
-    }
+  @include vp-1023 {
+    margin-left: 0;
+  }
 }
 
 .footer__title {
-    margin: 0;
-    margin-bottom: 20px;
-    font-family: $ff-fancy;
-    color: $color-default-white;
-    font-size: 15px;
-    line-height: 16px;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: $ff-fancy;
+  color: $color-default-white;
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 
-    @include vp-767 {
-        margin-bottom: 0;
-    }
+  @include vp-767 {
+    margin-bottom: 0;
+  }
 }
 
 .footer__nav {
-    margin-top: 8px;
+  margin-top: 8px;
 
-    @include vp-1023 {
-        margin-top: 0;
-    }
+  @include vp-1023 {
+    margin-top: 0;
+  }
 }
 
 .footer__nav-wrapper {
-    display: grid;
-    grid-template-columns: 220px 220px;
-    column-gap: 30px;
+  display: grid;
+  grid-template-columns: 220px 220px;
+  column-gap: 30px;
 
-    @include vp-1023 {
-        grid-template-columns: auto;
-    }
+  @include vp-1023 {
+    grid-template-columns: auto;
+  }
 }
 
 .footer__list {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 
+  @include vp-767 {
+    margin-top: 20px;
+  }
+
+  &--sub {
     @include vp-767 {
-        margin-top: 20px;
+      margin-top: 0;
     }
-
-    &--sub {
-        @include vp-767 {
-            margin-top: 0;
-        }
-    }
+  }
 }
 
 .footer__list-item {
-    margin-bottom: 8px;
-    line-height: 22px;
-    word-wrap: break-word;
+  margin-bottom: 8px;
+  line-height: 22px;
+  word-wrap: break-word;
 }
 
 .footer__nav-link {
-    color: $color-default-white-transparent;
+  color: $color-default-white-transparent;
 }
 
 .footer__contacts {
-    margin-left: auto;
-    margin-top: 8px;
-    width: 28.5%;
+  margin-left: auto;
+  margin-top: 8px;
+  width: 28.5%;
 
-    @include vp-1023 {
-        width: auto;
-        margin-left: 0;
-        margin-top: 0;
-    }
+  @include vp-1023 {
+    width: auto;
+    margin-left: 0;
+    margin-top: 0;
+  }
 }
 
 .footer__address {
-    margin-bottom: 10px;
-    font-style: normal;
+  margin-bottom: 10px;
+  font-style: normal;
 
-    @include vp-767 {
-        font-size: 14px;
-    }
+  @include vp-767 {
+    font-size: 14px;
+  }
 }
 
 .footer__contacts-link {
-    color: $color-default-white-transparent;
-    line-height: 22px;
+  color: $color-default-white-transparent;
+  line-height: 22px;
 
-    @include vp-767 {
-        font-size: 14px;
-    }
+  @include vp-767 {
+    font-size: 14px;
+  }
 }
 
 .footer a {
-    @include hover-focus {
-        color: $color-sky-blue;
-    }
+  @include hover-focus {
+    color: $color-sky-blue;
+  }
 }

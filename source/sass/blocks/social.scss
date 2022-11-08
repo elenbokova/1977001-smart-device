@@ -1,18 +1,18 @@
 .social__item {
-    margin-right: 15px;
+  margin-right: 15px;
 
-    &:last-child {
-        margin-right: 0;
-    }
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .social__link {
-    display: flex;
-    align-items: center;
-    padding: 5px;
-    color: $color-default-background;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  color: $color-default-background;
 
-    @include hover {
-        color: $color-sky-blue;
-    }
+  @include hover {
+    color: $color-sky-blue;
+  }
 }

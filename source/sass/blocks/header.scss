@@ -1,97 +1,97 @@
 .header {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 5;
-    background-image: $black-to-bottom;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  background-image: $black-to-bottom;
 }
 
 .header__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 
-    padding-top: 30px;
-    padding-bottom: 35px;
+  padding-top: 30px;
+  padding-bottom: 35px;
 
-    @include vp-1023 {
-        padding-top: 20px;
-        padding-bottom: 25px;
-    }
+  @include vp-1023 {
+    padding-top: 20px;
+    padding-bottom: 25px;
+  }
 
-    @include vp-767 {
-        padding-top: 10px;
-        padding-bottom: 20px;
-    }
+  @include vp-767 {
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
 }
 
 .header__logo {
-    align-self: flex-start;
-    flex-shrink: 0;
+  align-self: flex-start;
+  flex-shrink: 0;
 
-    @include vp-767 {
-        align-self: center;
-    }
+  @include vp-767 {
+    align-self: center;
+  }
 }
 
 .header__logo img {
-    @include vp-767 {
-        width: 35px;
-        height: 35px;
-    }
+  @include vp-767 {
+    width: 35px;
+    height: 35px;
+  }
 }
 
 .header__contacts {
-    align-self: normal;
-    display: grid;
-    grid-template-columns: (1fr 1fr);
-    column-gap: 45px;
-    row-gap: 20px;
+  align-self: normal;
+  display: grid;
+  grid-template-columns: (1fr 1fr);
+  column-gap: 45px;
+  row-gap: 20px;
 
-    @include vp-1023 {
-        margin-right: 15px;
-        column-gap: 25px;
-    }
+  @include vp-1023 {
+    margin-right: 15px;
+    column-gap: 25px;
+  }
 
-    @include vp-767 {
-        margin-right: 10px;
-    }
+  @include vp-767 {
+    margin-right: 10px;
+  }
 }
 
 .header__contact {
-    display: flex;
-    align-items: center;
-    margin-top: -5px;
-    color: $color-alice-blue;
+  display: flex;
+  align-items: center;
+  margin-top: -5px;
+  color: $color-alice-blue;
 
-    @include vp-1023 {
-        margin-top: 0;
-        padding: 10px 10px;
-        align-self: baseline;
-    }
+  @include vp-1023 {
+    margin-top: 0;
+    padding: 10px 10px;
+    align-self: baseline;
+  }
 }
 
 .header__contact svg {
-    margin-right: 15px;
+  margin-right: 15px;
 
-    @include vp-1023 {
-        margin-right: 0;
-    }
+  @include vp-1023 {
+    margin-right: 0;
+  }
 }
 
 .header__contact span {
-    @include vp-1023 {
-        display: none;
-    }
+  @include vp-1023 {
+    display: none;
+  }
 }
 
 .header__button {
-    margin-top: -5px;
-    margin-right: 62px;
-    max-width: 220px;
+  margin-top: -5px;
+  margin-right: 62px;
+  max-width: 220px;
+  align-self: center;
 
-    @include vp-1023 {
-        display: none;
-    }
+  @include vp-1023 {
+    display: none;
+  }
 }

@@ -745,6 +745,8 @@ button,
 .modal__content {
   position: relative;
   max-width: 500px;
+  margin-top: -299px;
+  margin-left: -22px;
   padding: 40px;
   border: none;
   border-radius: 3px;
@@ -936,9 +938,6 @@ form .modal__button {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
@@ -985,12 +984,15 @@ form .modal__button {
   margin-top: -5px;
   margin-right: 62px;
   max-width: 220px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 .promo {
   margin-top: -128px;
   padding-top: 310px;
-  padding-bottom: 260px;
+  padding-bottom: 280px;
   background-color: #041827;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0))), url("../img/background/bg-promo.jpg");
   background-image: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 72%, rgba(25, 32, 36, 0) 100%), url("../img/background/bg-promo.jpg");
@@ -1423,22 +1425,22 @@ form .modal__button {
   transition: opacity 0.2s;
 }
 
-button [data-id=nav-toggle]:before,
-[data-state=is-closed]:before {
+button [data-id=nav-toggle]::before,
+[data-state=is-closed]::before {
   content: "";
   position: absolute;
-  top: 0px;
+  top: 0;
   left: 0;
   width: 15px;
   height: 15px;
   background: url("/img/svg/icon-plus.svg");
 }
 
-button [data-id=nav-toggle]:before,
-[data-state=is-opened]:before {
+button [data-id=nav-toggle]::before,
+[data-state=is-opened]::before {
   content: "";
   position: absolute;
-  top: 0px;
+  top: 0;
   left: 0;
   width: 15px;
   height: 15px;
@@ -1636,7 +1638,7 @@ button [data-id=nav-toggle]:before,
   .promo {
     margin-top: -100px;
     padding-top: 180px;
-    padding-bottom: 186px;
+    padding-bottom: 205px;
     background-position: 20% 0;
   }
 
@@ -1876,7 +1878,7 @@ button [data-id=nav-toggle]:before,
   }
 
   .promo {
-    padding-bottom: 169px;
+    padding-bottom: 189px;
     background-position: 26% 0;
   }
 

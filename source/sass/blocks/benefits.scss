@@ -1,129 +1,129 @@
 .benefits {
-    padding: 120px 0;
+  padding: 120px 0;
 
-    @include vp-1023 {
-        padding-top: 80px;
-        padding-bottom: 87px;
-    }
+  @include vp-1023 {
+    padding-top: 80px;
+    padding-bottom: 87px;
+  }
 
-    @include vp-767 {
-        padding: 52px 0 50px;
-    }
+  @include vp-767 {
+    padding: 52px 0 50px;
+  }
 }
 
 .benefits ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 31px;
-    row-gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 31px;
+  row-gap: 30px;
 
-    @include vp-767 {
-        grid-template-columns: 1fr;
-    }
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
 }
 
 .benefits li {
-    position: relative;
-    min-height: 300px;
-    padding: 40px 45px 35px 43px;
-    border: 1px solid $color-whisper;
+  position: relative;
+  min-height: 300px;
+  padding: 40px 45px 35px 43px;
+  border: 1px solid $color-whisper;
 
-    &:nth-child(3) {
-        @include vp-767 {
-            min-height: 325px;
-        }
-    }
-
-    &:nth-child(4) {
-        @include vp-767 {
-            min-height: 325px;
-        }
-    }
-
-    &::before {
-        content: "";
-        position: absolute;
-        left: -1px;
-        top: 0;
-        width: 5px;
-        height: 100%;
-        background-color: $color-deep-sky-blue;
-    }
-
-    @include vp-1023 {
-        min-height: 355px;
-        padding-left: 45px;
-        padding-right: 35px;
-        padding-bottom: 30px;
-    }
-
+  &:nth-child(3) {
     @include vp-767 {
-        min-height: 340px;
-        padding-top: 26px;
-        padding-left: 28px;
-        padding-right: 35px;
-        padding-bottom: 35px;
+      min-height: 325px;
     }
+  }
 
-    @include hover-focus {
-        color: $color-alice-blue;
-        background-color: $color-deep-sky-blue;
-
-        svg,
-        h3 {
-            color: $color-alice-blue;
-        }
+  &:nth-child(4) {
+    @include vp-767 {
+      min-height: 325px;
     }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background-color: $color-deep-sky-blue;
+  }
+
+  @include vp-1023 {
+    min-height: 355px;
+    padding-left: 45px;
+    padding-right: 35px;
+    padding-bottom: 30px;
+  }
+
+  @include vp-767 {
+    min-height: 340px;
+    padding-top: 26px;
+    padding-left: 28px;
+    padding-right: 35px;
+    padding-bottom: 35px;
+  }
+
+  @include hover-focus {
+    color: $color-alice-blue;
+    background-color: $color-deep-sky-blue;
+
+    svg,
+    h3 {
+      color: $color-alice-blue;
+    }
+  }
 }
 
 .benefits svg {
-    margin-bottom: 15px;
-    color: $color-deep-sky-blue;
+  margin-bottom: 15px;
+  color: $color-deep-sky-blue;
 
-    @include vp-1023 {
-        margin-bottom: 10px;
-    }
+  @include vp-1023 {
+    margin-bottom: 10px;
+  }
 
-    @include vp-767 {
-        width: 30px;
-        height: 30px;
-    }
+  @include vp-767 {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .benefits h3 {
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-family: $ff-fancy;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 28px;
-    color: $color-deep-sky-blue;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-family: $ff-fancy;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: $color-deep-sky-blue;
 
-    @include vp-1023 {
-        margin-bottom: 11px;
-        line-height: 27px;
-    }
+  @include vp-1023 {
+    margin-bottom: 11px;
+    line-height: 27px;
+  }
 
-    @include vp-767 {
-        margin-bottom: 12px;
-        font-size: 20px;
-    }
+  @include vp-767 {
+    margin-bottom: 12px;
+    font-size: 20px;
+  }
 }
 
 .benefits p {
-    margin: 0;
-    line-height: 23px;
+  margin: 0;
+  line-height: 23px;
 
-    @include vp-1023 {
-        line-height: 22px;
-    }
+  @include vp-1023 {
+    line-height: 22px;
+  }
 
-    @include vp-767 {
-        font-size: 14px;
-        line-height: 19px;
-        min-height: 140px;
-    }
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+    min-height: 140px;
+  }
 }

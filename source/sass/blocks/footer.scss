@@ -45,7 +45,7 @@ button [data-id="nav-toggle"],
 }
 
 button [data-id="nav-toggle"],
-[data-state="is-closed"] ~ div {
+[data-state="is-closed"] ~ .footer__accordion-area {
   @include vp-767 {
     display: none;
   }
@@ -83,7 +83,7 @@ button [data-id="nav-toggle"],
   }
 }
 
-.footer__container > div {
+.footer__section {
   position: relative;
 
   &::after {
@@ -129,6 +129,7 @@ button [data-id="nav-toggle"],
 
 .footer__logo {
   display: inline-block;
+  vertical-align: baseline;
   margin-bottom: 22px;
   overflow: hidden;
 

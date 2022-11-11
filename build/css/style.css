@@ -1224,10 +1224,6 @@ form .modal__button {
   opacity: 0.9;
 }
 
-.products li.focus-visible:focus h3 {
-  color: #00b3ff;
-}
-
 .products li::after {
   content: "";
   position: absolute;
@@ -1274,6 +1270,10 @@ form .modal__button {
   font-weight: 400;
   line-height: 30px;
   color: #ffffff;
+}
+
+.products h3.focus-visible:focus {
+  color: #00b3ff;
 }
 
 .message {
@@ -1455,7 +1455,7 @@ button [data-id=nav-toggle]::before,
   padding-bottom: 55px;
 }
 
-.footer__container > div {
+.footer__section {
   position: relative;
 }
 
@@ -1467,6 +1467,7 @@ button [data-id=nav-toggle]::before,
 
 .footer__logo {
   display: inline-block;
+  vertical-align: baseline;
   margin-bottom: 22px;
   overflow: hidden;
 }
@@ -1920,11 +1921,11 @@ button [data-id=nav-toggle]::before,
     grid-template-columns: 1fr;
   }
 
-  .benefits li:nth-child(3) {
+  .benefits li:nth-child(3n) {
     min-height: 325px;
   }
 
-  .benefits li:nth-child(4) {
+  .benefits li:nth-child(4n) {
     min-height: 325px;
   }
 
@@ -2076,7 +2077,7 @@ button [data-id=nav-toggle]::before,
   }
 
   button [data-id=nav-toggle],
-  [data-state=is-closed] ~ div {
+  [data-state=is-closed] ~ .footer__accordion-area {
     display: none;
   }
 
@@ -2086,7 +2087,7 @@ button [data-id=nav-toggle]::before,
     padding-bottom: 35px;
   }
 
-  .footer__container > div::after {
+  .footer__section::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -2096,7 +2097,7 @@ button [data-id=nav-toggle]::before,
     background-color: rgba(255, 255, 255, 0.7);
   }
 
-  .footer__container > div:not(:first-child) {
+  .footer__section:not(:first-child) {
     padding: 20px 0 24px;
   }
 
@@ -2179,7 +2180,7 @@ button [data-id=nav-toggle]::before,
     opacity: 0.9;
   }
 
-  .products li:hover:not(.focus-visible) h3 {
+  .products h3:hover:not(.focus-visible) {
     color: #00b3ff;
   }
 

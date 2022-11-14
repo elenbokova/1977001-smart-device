@@ -1,4 +1,5 @@
 .footer {
+  margin-top: auto;
   background-color: $color-default-black;
   color: $color-default-white-transparent;
 }
@@ -13,20 +14,21 @@ footer [data-id="footer"],
 }
 
 .footer__nav-toggle {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 18px;
-  width: 15px;
-  height: 15px;
-  background-color: $color-transparent;
   border: 0;
-  cursor: pointer;
+  background-color: $color-transparent;
+  cursor: default;
 
-  &:hover {
-    &::before {
+  &::before {
+    display: none;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    cursor: pointer;
+
+    &:hover {
       opacity: 0.5;
-      transition: opacity 0.2s;
+      transition: opacity 0.1s;
     }
   }
 }
@@ -34,13 +36,16 @@ footer [data-id="footer"],
 button [data-id="nav-toggle"],
 [data-state="is-closed"] {
   &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 15px;
-    height: 15px;
-    background: url("/img/svg/icon-plus.svg");
+    @include vp-767 {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 18px;
+      right: 0;
+      width: 15px;
+      height: 15px;
+      background: url("/img/svg/icon-plus.svg");
+    }
   }
 }
 
@@ -54,13 +59,16 @@ button [data-id="nav-toggle"],
 button [data-id="nav-toggle"],
 [data-state="is-opened"] {
   &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 15px;
-    height: 15px;
-    background: url("/img/svg/icon-minus.svg");
+    @include vp-767 {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 18px;
+      right: 0;
+      width: 15px;
+      height: 15px;
+      background: url("/img/svg/icon-minus.svg");
+    }
   }
 }
 
@@ -131,6 +139,7 @@ button [data-id="nav-toggle"],
   display: inline-block;
   vertical-align: baseline;
   margin-bottom: 22px;
+  flex-shrink: 0;
   overflow: hidden;
 
   @include vp-1023 {
@@ -161,6 +170,7 @@ button [data-id="nav-toggle"],
   margin-left: 10px;
   padding: 0;
   list-style-type: none;
+  flex-wrap: wrap;
 
   @include vp-1023 {
     margin-left: 0;
@@ -184,7 +194,7 @@ button [data-id="nav-toggle"],
 }
 
 .footer__nav {
-  margin-top: 8px;
+  margin-top: 4px;
 
   @include vp-1023 {
     margin-top: 0;
@@ -229,7 +239,7 @@ button [data-id="nav-toggle"],
 
 .footer__contacts {
   margin-left: auto;
-  margin-top: 8px;
+  margin-top: 4px;
   width: 28.5%;
 
   @include vp-1023 {

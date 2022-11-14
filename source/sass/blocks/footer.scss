@@ -4,19 +4,19 @@
   color: $color-default-white-transparent;
 }
 
-footer [data-id="footer"],
-[data-js-status="is-active"] {
-  @include vp-767 {
-    .footer__nav-toggle {
-      display: block;
-    }
-  }
-}
-
 .footer__nav-toggle {
   border: 0;
   background-color: $color-transparent;
   cursor: default;
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: $ff-fancy;
+  color: $color-default-white;
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 
   &::before {
     display: none;
@@ -24,6 +24,9 @@ footer [data-id="footer"],
 
   @include vp-767 {
     width: 100%;
+    padding: 20px 0 24px;
+    margin-bottom: 0;
+    display: flex;
     cursor: pointer;
 
     &:hover {
@@ -105,12 +108,6 @@ button [data-id="nav-toggle"],
       background-color: $color-default-white-transparent;
     }
   }
-
-  &:not(:first-child) {
-    @include vp-767 {
-      padding: 20px 0 24px;
-    }
-  }
 }
 
 .footer__heading {
@@ -177,20 +174,9 @@ button [data-id="nav-toggle"],
   }
 }
 
-.footer__title {
-  margin: 0;
-  margin-bottom: 20px;
-  font-family: $ff-fancy;
-  color: $color-default-white;
-  font-size: 15px;
-  line-height: 16px;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-
-  @include vp-767 {
-    margin-bottom: 0;
-  }
+.footer__accordion-area {
+  margin-top: -7px;
+  padding-bottom: 10px;
 }
 
 .footer__nav {
@@ -215,16 +201,6 @@ button [data-id="nav-toggle"],
   margin: 0;
   padding: 0;
   list-style-type: none;
-
-  @include vp-767 {
-    margin-top: 20px;
-  }
-
-  &--sub {
-    @include vp-767 {
-      margin-top: 0;
-    }
-  }
 }
 
 .footer__list-item {

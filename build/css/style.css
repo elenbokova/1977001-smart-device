@@ -1419,6 +1419,15 @@ form .modal__button {
   border: 0;
   background-color: rgba(255, 255, 255, 0);
   cursor: default;
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: "Roboto Condensed", "Verdana", sans-serif;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .footer__nav-toggle::before {
@@ -1464,16 +1473,9 @@ form .modal__button {
   flex-wrap: wrap;
 }
 
-.footer__title {
-  margin: 0;
-  margin-bottom: 20px;
-  font-family: "Roboto Condensed", "Verdana", sans-serif;
-  color: #ffffff;
-  font-size: 15px;
-  line-height: 16px;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+.footer__accordion-area {
+  margin-top: -7px;
+  padding-bottom: 10px;
 }
 
 .footer__nav {
@@ -2053,13 +2055,13 @@ form .modal__button {
     padding-left: 29px;
   }
 
-  footer [data-id=footer] .footer__nav-toggle,
-  [data-js-status=is-active] .footer__nav-toggle {
-    display: block;
-  }
-
   .footer__nav-toggle {
     width: 100%;
+    padding: 20px 0 24px;
+    margin-bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     cursor: pointer;
   }
 
@@ -2115,10 +2117,6 @@ form .modal__button {
     background-color: rgba(255, 255, 255, 0.7);
   }
 
-  .footer__section:not(:first-child) {
-    padding: 20px 0 24px;
-  }
-
   .footer__heading {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2137,18 +2135,6 @@ form .modal__button {
   }
 
   .footer__social {
-    margin-top: 0;
-  }
-
-  .footer__title {
-    margin-bottom: 0;
-  }
-
-  .footer__list {
-    margin-top: 20px;
-  }
-
-  .footer__list--sub {
     margin-top: 0;
   }
 

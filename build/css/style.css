@@ -1132,7 +1132,7 @@ form .modal__button {
 
 .about strong {
   margin-right: 73px;
-  background: url("/img/background/bg-about.jpg");
+  background: url("../img/background/bg-about.jpg");
   font-family: "Roboto Condensed", "Verdana", sans-serif;
   font-size: 156px;
   font-weight: 700;
@@ -2081,7 +2081,7 @@ form .modal__button {
     right: 0;
     width: 15px;
     height: 15px;
-    background: url("/img/svg/icon-plus.svg");
+    background: url("../img/svg/icon-plus.svg");
   }
 
   button [data-id=nav-toggle],
@@ -2098,7 +2098,7 @@ form .modal__button {
     right: 0;
     width: 15px;
     height: 15px;
-    background: url("/img/svg/icon-minus.svg");
+    background: url("../img/svg/icon-minus.svg");
   }
 
   .footer__container {
@@ -2205,7 +2205,7 @@ form .modal__button {
   }
 
   .about strong {
-    background: url("/img/background/bg-about@2x.jpg");
+    background: url("../img/background/bg-about@2x.jpg");
     -webkit-background-clip: text;
     background-clip: text;
   }

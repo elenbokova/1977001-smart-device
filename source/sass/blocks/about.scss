@@ -13,7 +13,7 @@
 
 .about strong {
   margin-right: 73px;
-  background: url("/img/background/bg-about.jpg");
+  background: url("../img/background/bg-about.jpg");
   font-family: $ff-fancy;
   font-size: 156px;
   font-weight: 700;
@@ -24,7 +24,7 @@
   color: transparent;
 
   @media (min-resolution: $retina-dppx) {
-    background: url("/img/background/bg-about@2x.jpg");
+    background: url("../img/background/bg-about@2x.jpg");
     background-clip: text;
   }
 

@@ -7,7 +7,7 @@
 .footer__nav-toggle {
   border: 0;
   background-color: $color-transparent;
-  cursor: default;
+  padding: 0;
   margin: 0;
   margin-bottom: 20px;
   font-family: $ff-fancy;
@@ -17,6 +17,7 @@
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  cursor: default;
 
   &::before {
     display: none;
@@ -28,10 +29,25 @@
     margin-bottom: 0;
     display: flex;
     cursor: pointer;
+    outline: none;
 
     &:hover {
       opacity: 0.5;
       transition: opacity 0.1s;
+    }
+
+    @include focus {
+      outline: 1px solid $color-default-white-transparent;
+    }
+  }
+}
+
+footer [data-id="footer"],
+[data-js-status="no-js"] {
+  @include vp-767 {
+    .footer__nav-toggle:hover {
+      opacity: 1;
+      cursor: default;
     }
   }
 }

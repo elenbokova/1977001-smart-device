@@ -94,7 +94,7 @@
   position: relative;
 
   max-width: 500px;
-  margin-top: -299px;
+  margin-top: 3%;
   margin-left: -22px;
   padding: 40px;
 
@@ -111,8 +111,8 @@
 
 .modal__close-button {
   position: absolute;
-  top: 22px;
-  right: 22px;
+  top: 17px;
+  right: 15px;
   z-index: 1;
 
   width: 40px;
@@ -179,6 +179,7 @@ form .modal__button {
   font-size: 14px;
   color: $color-default-white-transparent;
   cursor: pointer;
+  order: 1;
 
   &::before {
     content: "";
@@ -194,6 +195,8 @@ form .modal__button {
 }
 
 .modal__checkbox-input {
+  bottom: 8%;
+
   @include focus {
     +.modal__checkbox-label {
       outline: 1px solid $color-default-white-transparent;

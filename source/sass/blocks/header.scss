@@ -4,6 +4,10 @@
   width: 100%;
   z-index: 5;
   background-image: $black-to-bottom;
+
+  @include vp-1023 {
+    position: relative;
+  }
 }
 
 .header__container {
@@ -64,6 +68,8 @@
   align-items: center;
   margin-top: -5px;
   color: $color-alice-blue;
+  height: fit-content;
+  align-self: center;
 
   @include vp-1023 {
     margin-top: 0;

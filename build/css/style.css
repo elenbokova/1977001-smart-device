@@ -745,7 +745,7 @@ button,
 .modal__content {
   position: relative;
   max-width: 500px;
-  margin-top: -299px;
+  margin-top: 3%;
   margin-left: -22px;
   padding: 40px;
   border: none;
@@ -755,8 +755,8 @@ button,
 
 .modal__close-button {
   position: absolute;
-  top: 22px;
-  right: 22px;
+  top: 17px;
+  right: 15px;
   z-index: 1;
   width: 40px;
   height: 40px;
@@ -823,6 +823,9 @@ form .modal__button {
   font-size: 14px;
   color: rgba(255, 255, 255, 0.7);
   cursor: pointer;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
 }
 
 .modal__checkbox-label::before {
@@ -837,6 +840,10 @@ form .modal__button {
   height: 15px;
   border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 2px;
+}
+
+.modal__checkbox-input {
+  bottom: 8%;
 }
 
 .modal__checkbox-input.focus-visible:focus + .modal__checkbox-label {
@@ -976,6 +983,12 @@ form .modal__button {
   align-items: center;
   margin-top: -5px;
   color: #f2f5f6;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 .header__contact svg {
@@ -1168,6 +1181,9 @@ form .modal__button {
   padding-top: 13px;
   padding-bottom: 13px;
   min-width: 180px;
+  -webkit-box-ordinal-group: 0;
+  -ms-flex-order: -1;
+  order: -1;
 }
 
 .about [data-state=is-hidden] {
@@ -1369,6 +1385,15 @@ form .modal__button {
   font-weight: 700;
   font-size: 16px;
   letter-spacing: 0.05em;
+  -webkit-box-ordinal-group: 0;
+  -ms-flex-order: -1;
+  order: -1;
+}
+
+.message__form input[type=checkbox] {
+  right: 44%;
+  bottom: 0;
+  width: 5%;
 }
 
 .message__form [type=checkbox].focus-visible:focus + label {
@@ -1418,7 +1443,7 @@ form .modal__button {
 .footer__nav-toggle {
   border: 0;
   background-color: rgba(255, 255, 255, 0);
-  cursor: default;
+  padding: 0;
   margin: 0;
   margin-bottom: 20px;
   font-family: "Roboto Condensed", "Verdana", sans-serif;
@@ -1428,6 +1453,7 @@ form .modal__button {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  cursor: default;
 }
 
 .footer__nav-toggle::before {
@@ -1589,6 +1615,10 @@ form .modal__button {
 */
 
 @media (max-width: 1023px) {
+  .header {
+    position: relative;
+  }
+
   .header__container {
     padding-top: 20px;
     padding-bottom: 25px;
@@ -2033,7 +2063,13 @@ form .modal__button {
   }
 
   .message__form fieldset {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 
   .message__form textarea {
@@ -2046,12 +2082,18 @@ form .modal__button {
     margin-bottom: 23px;
   }
 
+  .message__form input[type=checkbox] {
+    left: 0;
+  }
+
   .message__form [type=checkbox] + label::before {
     left: 4px;
   }
 
   .message__form [type=checkbox] + label {
     display: block;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
     padding-left: 29px;
   }
 
@@ -2063,6 +2105,7 @@ form .modal__button {
     display: -ms-flexbox;
     display: flex;
     cursor: pointer;
+    outline: none;
   }
 
   .footer__nav-toggle:hover {
@@ -2070,6 +2113,16 @@ form .modal__button {
     -webkit-transition: opacity 0.1s;
     -o-transition: opacity 0.1s;
     transition: opacity 0.1s;
+  }
+
+  .footer__nav-toggle.focus-visible:focus {
+    outline: 1px solid rgba(255, 255, 255, 0.7);
+  }
+
+  footer [data-id=footer] .footer__nav-toggle:hover,
+  [data-js-status=no-js] .footer__nav-toggle:hover {
+    opacity: 1;
+    cursor: default;
   }
 
   button [data-id=nav-toggle]::before,

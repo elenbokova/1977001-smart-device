@@ -38,10 +38,10 @@ const onPhoneInput = (evt) => {
 
   } else {
     // Not Russian phone number
-    formattedInputValue = '+' + inputNumbersValue.substring(0, 16);
+    formattedInputValue = '+' + inputNumbersValue.substring(0, 11);
   }
 
-  if (formattedInputValue.length !== 17) {
+  if (formattedInputValue.length < 11) {
     input.setCustomValidity('Пожалуйста, введите номер телефона');
   } else {
     input.setCustomValidity('');
